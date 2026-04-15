@@ -69,34 +69,37 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
       */}
       <div
         ref={toolbarRef}
-        className="flex flex-col gap-3 mb-4 sticky top-16 z-10
-          bg-slate-50/95 dark:bg-gray-950/95 backdrop-blur-sm pt-1 pb-3"
+        className="flex flex-col gap-3 mb-4 sticky top-16 z-10 pt-1 pb-3
+          bg-gradient-to-b from-slate-50 to-slate-50/95
+          dark:bg-none dark:bg-gray-950/95
+          backdrop-blur-sm
+          border-b border-gray-200/60 dark:border-white/5"
       >
         {/* Search + controls row */}
         <div className="flex items-center gap-2">
           <div className="relative flex-1">
-            <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500" />
             <input
               type="text"
               value={query}
               onChange={e => {
                 setQuery(e.target.value)
-                // Reset active region when search changes
                 if (!e.target.value) setActiveRegion(localRegion)
               }}
               placeholder="Search city, region or timezone…"
-              className="w-full pl-9 pr-8 py-2 text-sm rounded-xl
-                bg-white dark:bg-white/5
-                border border-gray-200 dark:border-white/10
-                text-gray-900 dark:text-white
+              className="w-full pl-9 pr-8 py-2.5 text-sm rounded-xl
+                bg-white dark:bg-gray-800/70
+                border border-gray-300/70 dark:border-gray-600/50
+                shadow-sm dark:shadow-none
+                text-gray-900 dark:text-gray-100
                 placeholder-gray-400 dark:placeholder-gray-500
-                focus:outline-none focus:ring-2 focus:ring-blue-500/40
+                focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-blue-400 dark:focus:border-blue-500/50
                 transition-all"
             />
             {query && (
               <button
                 onClick={() => { setQuery(''); setActiveRegion(localRegion) }}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-0.5"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 p-0.5 transition-colors"
               >
                 <X size={13} />
               </button>
@@ -108,11 +111,11 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
             onClick={() => setShowSeconds(s => !s)}
             title={showSeconds ? 'Hide seconds' : 'Show seconds'}
             className={`
-              flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium
-              border transition-all flex-shrink-0
+              flex items-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-medium
+              border transition-all duration-150 flex-shrink-0 shadow-sm
               ${showSeconds
-                ? 'bg-blue-500 border-blue-500 text-white'
-                : 'bg-white dark:bg-white/5 border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400'
+                ? 'bg-blue-500 border-blue-500 text-white shadow-blue-500/25'
+                : 'bg-white dark:bg-gray-800/70 border-gray-300/70 dark:border-gray-600/50 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/70'
               }
             `}
           >
@@ -126,10 +129,12 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
               <button
                 onClick={handleCollapseAll}
                 title="Collapse all regions"
-                className="flex items-center gap-1 px-2.5 py-2 rounded-xl text-xs font-medium border
-                  bg-white dark:bg-white/5 border-gray-200 dark:border-white/10
-                  text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200
-                  transition-colors flex-shrink-0"
+                className="flex items-center gap-1 px-2.5 py-2.5 rounded-xl text-xs font-medium
+                  border shadow-sm transition-all duration-150 flex-shrink-0
+                  bg-white dark:bg-gray-800/70
+                  border-gray-300/70 dark:border-gray-600/50
+                  text-gray-500 dark:text-gray-300
+                  hover:bg-gray-50 dark:hover:bg-gray-700/70"
               >
                 <ChevronsDownUp size={13} />
                 <span className="hidden sm:inline">Collapse</span>
@@ -138,10 +143,12 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
               <button
                 onClick={handleExpandAll}
                 title="Expand all regions"
-                className="flex items-center gap-1 px-2.5 py-2 rounded-xl text-xs font-medium border
-                  bg-white dark:bg-white/5 border-gray-200 dark:border-white/10
-                  text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200
-                  transition-colors flex-shrink-0"
+                className="flex items-center gap-1 px-2.5 py-2.5 rounded-xl text-xs font-medium
+                  border shadow-sm transition-all duration-150 flex-shrink-0
+                  bg-white dark:bg-gray-800/70
+                  border-gray-300/70 dark:border-gray-600/50
+                  text-gray-500 dark:text-gray-300
+                  hover:bg-gray-50 dark:hover:bg-gray-700/70"
               >
                 <ChevronsUpDown size={13} />
                 <span className="hidden sm:inline">Expand</span>
@@ -159,11 +166,16 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
                 key={region}
                 onClick={() => scrollToRegion(region)}
                 className={`
-                  flex-shrink-0 text-xs font-medium px-2.5 py-1 rounded-full
+                  flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full
                   transition-all duration-150 active:scale-95
                   ${isActive
-                    ? 'bg-blue-500 text-white shadow-sm shadow-blue-500/30'
-                    : 'bg-white dark:bg-white/5 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-white/10 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 dark:hover:bg-blue-500/10 dark:hover:text-blue-400'
+                    ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30 scale-105'
+                    : `bg-white dark:bg-gray-800/60
+                       text-gray-500 dark:text-gray-400
+                       border border-gray-300/70 dark:border-gray-600/40
+                       shadow-sm
+                       hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300
+                       dark:hover:bg-blue-500/15 dark:hover:text-blue-300 dark:hover:border-blue-500/40`
                   }
                 `}
               >
