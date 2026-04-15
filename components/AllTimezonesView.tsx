@@ -88,12 +88,12 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
               }}
               placeholder="Search city, region or timezone…"
               className="w-full pl-9 pr-8 py-2.5 text-sm rounded-xl
-                bg-white dark:bg-gray-800/70
-                border border-gray-300/70 dark:border-gray-600/50
+                bg-white dark:bg-white/5
+                border border-gray-300/70 dark:border-white/10
                 shadow-sm dark:shadow-none
                 text-gray-900 dark:text-gray-100
                 placeholder-gray-400 dark:placeholder-gray-500
-                focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-blue-400 dark:focus:border-blue-500/50
+                focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-blue-400 dark:focus:border-blue-500/30
                 transition-all"
             />
             {query && (
@@ -115,7 +115,7 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
               border transition-all duration-150 flex-shrink-0 shadow-sm
               ${showSeconds
                 ? 'bg-blue-500 border-blue-500 text-white shadow-blue-500/25'
-                : 'bg-white dark:bg-gray-800/70 border-gray-300/70 dark:border-gray-600/50 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/70'
+                : 'bg-white dark:bg-white/5 border-gray-300/70 dark:border-white/10 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10'
               }
             `}
           >
@@ -131,10 +131,10 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
                 title="Collapse all regions"
                 className="flex items-center gap-1 px-2.5 py-2.5 rounded-xl text-xs font-medium
                   border shadow-sm transition-all duration-150 flex-shrink-0
-                  bg-white dark:bg-gray-800/70
-                  border-gray-300/70 dark:border-gray-600/50
+                  bg-white dark:bg-white/5
+                  border-gray-300/70 dark:border-white/10
                   text-gray-500 dark:text-gray-300
-                  hover:bg-gray-50 dark:hover:bg-gray-700/70"
+                  hover:bg-gray-50 dark:hover:bg-white/10"
               >
                 <ChevronsDownUp size={13} />
                 <span className="hidden sm:inline">Collapse</span>
@@ -145,10 +145,10 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
                 title="Expand all regions"
                 className="flex items-center gap-1 px-2.5 py-2.5 rounded-xl text-xs font-medium
                   border shadow-sm transition-all duration-150 flex-shrink-0
-                  bg-white dark:bg-gray-800/70
-                  border-gray-300/70 dark:border-gray-600/50
+                  bg-white dark:bg-white/5
+                  border-gray-300/70 dark:border-white/10
                   text-gray-500 dark:text-gray-300
-                  hover:bg-gray-50 dark:hover:bg-gray-700/70"
+                  hover:bg-gray-50 dark:hover:bg-white/10"
               >
                 <ChevronsUpDown size={13} />
                 <span className="hidden sm:inline">Expand</span>
@@ -170,12 +170,12 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
                   transition-all duration-150 active:scale-95
                   ${isActive
                     ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30 scale-105'
-                    : `bg-white dark:bg-gray-800/60
+                    : `bg-white dark:bg-white/5
                        text-gray-500 dark:text-gray-400
-                       border border-gray-300/70 dark:border-gray-600/40
+                       border border-gray-300/70 dark:border-white/10
                        shadow-sm
                        hover:bg-blue-50 hover:text-blue-600 hover:border-blue-300
-                       dark:hover:bg-blue-500/15 dark:hover:text-blue-300 dark:hover:border-blue-500/40`
+                       dark:hover:bg-white/10 dark:hover:text-blue-300 dark:hover:border-blue-400/30`
                   }
                 `}
               >
