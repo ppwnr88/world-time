@@ -88,12 +88,13 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
               }}
               placeholder="Search city, region or timezone…"
               className="w-full pl-10 pr-9 py-3 text-sm rounded-2xl
-                bg-gray-100/80 dark:bg-white/[0.07]
-                border border-gray-200 dark:border-white/[0.08]
+                bg-gray-100/80 dark:bg-transparent
+                border border-gray-200 dark:border-white/20
                 text-gray-900 dark:text-gray-100
-                placeholder-gray-400 dark:placeholder-gray-500
-                focus:outline-none focus:bg-white dark:focus:bg-white/10
-                focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400/60 dark:focus:border-blue-400/40
+                placeholder-gray-400 dark:placeholder-white/30
+                focus:outline-none focus:bg-white dark:focus:bg-white/5
+                focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400/60
+                dark:focus:ring-blue-400/20 dark:focus:border-blue-400/50
                 transition-all duration-200"
             />
             {query && (
