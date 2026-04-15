@@ -69,11 +69,12 @@ export default function AllTimezonesView({ localTimezone }: AllTimezonesViewProp
       */}
       <div
         ref={toolbarRef}
-        className="flex flex-col gap-3 mb-4 sticky top-16 z-10 pt-1 pb-3
-          bg-gradient-to-b from-slate-50 to-slate-50/95
-          dark:bg-none dark:bg-gray-950/95
-          backdrop-blur-sm
-          border-b border-gray-200/60 dark:border-white/5"
+        className="flex flex-col gap-3 mb-4 sticky top-16 z-10 px-1 pt-2 pb-3
+          bg-white/80 backdrop-blur-md
+          dark:bg-slate-800/40 dark:backdrop-blur-md
+          border-b border-gray-200/70 dark:border-white/10
+          shadow-sm dark:shadow-md dark:shadow-black/30
+          rounded-b-xl"
       >
         {/* Search + controls row */}
         <div className="flex items-center gap-2">
