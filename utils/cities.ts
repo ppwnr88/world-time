@@ -1,0 +1,138 @@
+import { City } from '../types'
+
+export const CITIES: City[] = [
+  // Americas
+  { id: 'new-york', name: 'New York', country: 'United States', timezone: 'America/New_York', flag: '🇺🇸', region: 'Americas' },
+  { id: 'los-angeles', name: 'Los Angeles', country: 'United States', timezone: 'America/Los_Angeles', flag: '🇺🇸', region: 'Americas' },
+  { id: 'chicago', name: 'Chicago', country: 'United States', timezone: 'America/Chicago', flag: '🇺🇸', region: 'Americas' },
+  { id: 'houston', name: 'Houston', country: 'United States', timezone: 'America/Chicago', flag: '🇺🇸', region: 'Americas' },
+  { id: 'miami', name: 'Miami', country: 'United States', timezone: 'America/New_York', flag: '🇺🇸', region: 'Americas' },
+  { id: 'san-francisco', name: 'San Francisco', country: 'United States', timezone: 'America/Los_Angeles', flag: '🇺🇸', region: 'Americas' },
+  { id: 'seattle', name: 'Seattle', country: 'United States', timezone: 'America/Los_Angeles', flag: '🇺🇸', region: 'Americas' },
+  { id: 'denver', name: 'Denver', country: 'United States', timezone: 'America/Denver', flag: '🇺🇸', region: 'Americas' },
+  { id: 'atlanta', name: 'Atlanta', country: 'United States', timezone: 'America/New_York', flag: '🇺🇸', region: 'Americas' },
+  { id: 'boston', name: 'Boston', country: 'United States', timezone: 'America/New_York', flag: '🇺🇸', region: 'Americas' },
+  { id: 'phoenix', name: 'Phoenix', country: 'United States', timezone: 'America/Phoenix', flag: '🇺🇸', region: 'Americas' },
+  { id: 'las-vegas', name: 'Las Vegas', country: 'United States', timezone: 'America/Los_Angeles', flag: '🇺🇸', region: 'Americas' },
+  { id: 'toronto', name: 'Toronto', country: 'Canada', timezone: 'America/Toronto', flag: '🇨🇦', region: 'Americas' },
+  { id: 'vancouver', name: 'Vancouver', country: 'Canada', timezone: 'America/Vancouver', flag: '🇨🇦', region: 'Americas' },
+  { id: 'montreal', name: 'Montreal', country: 'Canada', timezone: 'America/Toronto', flag: '🇨🇦', region: 'Americas' },
+  { id: 'mexico-city', name: 'Mexico City', country: 'Mexico', timezone: 'America/Mexico_City', flag: '🇲🇽', region: 'Americas' },
+  { id: 'sao-paulo', name: 'São Paulo', country: 'Brazil', timezone: 'America/Sao_Paulo', flag: '🇧🇷', region: 'Americas' },
+  { id: 'rio-de-janeiro', name: 'Rio de Janeiro', country: 'Brazil', timezone: 'America/Sao_Paulo', flag: '🇧🇷', region: 'Americas' },
+  { id: 'buenos-aires', name: 'Buenos Aires', country: 'Argentina', timezone: 'America/Argentina/Buenos_Aires', flag: '🇦🇷', region: 'Americas' },
+  { id: 'lima', name: 'Lima', country: 'Peru', timezone: 'America/Lima', flag: '🇵🇪', region: 'Americas' },
+  { id: 'bogota', name: 'Bogotá', country: 'Colombia', timezone: 'America/Bogota', flag: '🇨🇴', region: 'Americas' },
+  { id: 'santiago', name: 'Santiago', country: 'Chile', timezone: 'America/Santiago', flag: '🇨🇱', region: 'Americas' },
+  { id: 'caracas', name: 'Caracas', country: 'Venezuela', timezone: 'America/Caracas', flag: '🇻🇪', region: 'Americas' },
+  { id: 'havana', name: 'Havana', country: 'Cuba', timezone: 'America/Havana', flag: '🇨🇺', region: 'Americas' },
+  { id: 'panama-city', name: 'Panama City', country: 'Panama', timezone: 'America/Panama', flag: '🇵🇦', region: 'Americas' },
+
+  // Europe
+  { id: 'london', name: 'London', country: 'United Kingdom', timezone: 'Europe/London', flag: '🇬🇧', region: 'Europe' },
+  { id: 'paris', name: 'Paris', country: 'France', timezone: 'Europe/Paris', flag: '🇫🇷', region: 'Europe' },
+  { id: 'berlin', name: 'Berlin', country: 'Germany', timezone: 'Europe/Berlin', flag: '🇩🇪', region: 'Europe' },
+  { id: 'madrid', name: 'Madrid', country: 'Spain', timezone: 'Europe/Madrid', flag: '🇪🇸', region: 'Europe' },
+  { id: 'rome', name: 'Rome', country: 'Italy', timezone: 'Europe/Rome', flag: '🇮🇹', region: 'Europe' },
+  { id: 'amsterdam', name: 'Amsterdam', country: 'Netherlands', timezone: 'Europe/Amsterdam', flag: '🇳🇱', region: 'Europe' },
+  { id: 'brussels', name: 'Brussels', country: 'Belgium', timezone: 'Europe/Brussels', flag: '🇧🇪', region: 'Europe' },
+  { id: 'vienna', name: 'Vienna', country: 'Austria', timezone: 'Europe/Vienna', flag: '🇦🇹', region: 'Europe' },
+  { id: 'stockholm', name: 'Stockholm', country: 'Sweden', timezone: 'Europe/Stockholm', flag: '🇸🇪', region: 'Europe' },
+  { id: 'oslo', name: 'Oslo', country: 'Norway', timezone: 'Europe/Oslo', flag: '🇳🇴', region: 'Europe' },
+  { id: 'copenhagen', name: 'Copenhagen', country: 'Denmark', timezone: 'Europe/Copenhagen', flag: '🇩🇰', region: 'Europe' },
+  { id: 'helsinki', name: 'Helsinki', country: 'Finland', timezone: 'Europe/Helsinki', flag: '🇫🇮', region: 'Europe' },
+  { id: 'warsaw', name: 'Warsaw', country: 'Poland', timezone: 'Europe/Warsaw', flag: '🇵🇱', region: 'Europe' },
+  { id: 'prague', name: 'Prague', country: 'Czech Republic', timezone: 'Europe/Prague', flag: '🇨🇿', region: 'Europe' },
+  { id: 'budapest', name: 'Budapest', country: 'Hungary', timezone: 'Europe/Budapest', flag: '🇭🇺', region: 'Europe' },
+  { id: 'bucharest', name: 'Bucharest', country: 'Romania', timezone: 'Europe/Bucharest', flag: '🇷🇴', region: 'Europe' },
+  { id: 'athens', name: 'Athens', country: 'Greece', timezone: 'Europe/Athens', flag: '🇬🇷', region: 'Europe' },
+  { id: 'lisbon', name: 'Lisbon', country: 'Portugal', timezone: 'Europe/Lisbon', flag: '🇵🇹', region: 'Europe' },
+  { id: 'zurich', name: 'Zurich', country: 'Switzerland', timezone: 'Europe/Zurich', flag: '🇨🇭', region: 'Europe' },
+  { id: 'moscow', name: 'Moscow', country: 'Russia', timezone: 'Europe/Moscow', flag: '🇷🇺', region: 'Europe' },
+  { id: 'istanbul', name: 'Istanbul', country: 'Turkey', timezone: 'Europe/Istanbul', flag: '🇹🇷', region: 'Europe' },
+  { id: 'kyiv', name: 'Kyiv', country: 'Ukraine', timezone: 'Europe/Kiev', flag: '🇺🇦', region: 'Europe' },
+  { id: 'dublin', name: 'Dublin', country: 'Ireland', timezone: 'Europe/Dublin', flag: '🇮🇪', region: 'Europe' },
+  { id: 'barcelona', name: 'Barcelona', country: 'Spain', timezone: 'Europe/Madrid', flag: '🇪🇸', region: 'Europe' },
+  { id: 'milan', name: 'Milan', country: 'Italy', timezone: 'Europe/Rome', flag: '🇮🇹', region: 'Europe' },
+
+  // Asia
+  { id: 'dubai', name: 'Dubai', country: 'UAE', timezone: 'Asia/Dubai', flag: '🇦🇪', region: 'Asia' },
+  { id: 'mumbai', name: 'Mumbai', country: 'India', timezone: 'Asia/Kolkata', flag: '🇮🇳', region: 'Asia' },
+  { id: 'delhi', name: 'New Delhi', country: 'India', timezone: 'Asia/Kolkata', flag: '🇮🇳', region: 'Asia' },
+  { id: 'kolkata', name: 'Kolkata', country: 'India', timezone: 'Asia/Kolkata', flag: '🇮🇳', region: 'Asia' },
+  { id: 'bangalore', name: 'Bangalore', country: 'India', timezone: 'Asia/Kolkata', flag: '🇮🇳', region: 'Asia' },
+  { id: 'dhaka', name: 'Dhaka', country: 'Bangladesh', timezone: 'Asia/Dhaka', flag: '🇧🇩', region: 'Asia' },
+  { id: 'karachi', name: 'Karachi', country: 'Pakistan', timezone: 'Asia/Karachi', flag: '🇵🇰', region: 'Asia' },
+  { id: 'lahore', name: 'Lahore', country: 'Pakistan', timezone: 'Asia/Karachi', flag: '🇵🇰', region: 'Asia' },
+  { id: 'bangkok', name: 'Bangkok', country: 'Thailand', timezone: 'Asia/Bangkok', flag: '🇹🇭', region: 'Asia' },
+  { id: 'singapore', name: 'Singapore', country: 'Singapore', timezone: 'Asia/Singapore', flag: '🇸🇬', region: 'Asia' },
+  { id: 'kuala-lumpur', name: 'Kuala Lumpur', country: 'Malaysia', timezone: 'Asia/Kuala_Lumpur', flag: '🇲🇾', region: 'Asia' },
+  { id: 'jakarta', name: 'Jakarta', country: 'Indonesia', timezone: 'Asia/Jakarta', flag: '🇮🇩', region: 'Asia' },
+  { id: 'bali', name: 'Bali', country: 'Indonesia', timezone: 'Asia/Makassar', flag: '🇮🇩', region: 'Asia' },
+  { id: 'ho-chi-minh', name: 'Ho Chi Minh City', country: 'Vietnam', timezone: 'Asia/Ho_Chi_Minh', flag: '🇻🇳', region: 'Asia' },
+  { id: 'hanoi', name: 'Hanoi', country: 'Vietnam', timezone: 'Asia/Ho_Chi_Minh', flag: '🇻🇳', region: 'Asia' },
+  { id: 'manila', name: 'Manila', country: 'Philippines', timezone: 'Asia/Manila', flag: '🇵🇭', region: 'Asia' },
+  { id: 'hong-kong', name: 'Hong Kong', country: 'Hong Kong', timezone: 'Asia/Hong_Kong', flag: '🇭🇰', region: 'Asia' },
+  { id: 'taipei', name: 'Taipei', country: 'Taiwan', timezone: 'Asia/Taipei', flag: '🇹🇼', region: 'Asia' },
+  { id: 'beijing', name: 'Beijing', country: 'China', timezone: 'Asia/Shanghai', flag: '🇨🇳', region: 'Asia' },
+  { id: 'shanghai', name: 'Shanghai', country: 'China', timezone: 'Asia/Shanghai', flag: '🇨🇳', region: 'Asia' },
+  { id: 'shenzhen', name: 'Shenzhen', country: 'China', timezone: 'Asia/Shanghai', flag: '🇨🇳', region: 'Asia' },
+  { id: 'guangzhou', name: 'Guangzhou', country: 'China', timezone: 'Asia/Shanghai', flag: '🇨🇳', region: 'Asia' },
+  { id: 'tokyo', name: 'Tokyo', country: 'Japan', timezone: 'Asia/Tokyo', flag: '🇯🇵', region: 'Asia' },
+  { id: 'osaka', name: 'Osaka', country: 'Japan', timezone: 'Asia/Tokyo', flag: '🇯🇵', region: 'Asia' },
+  { id: 'seoul', name: 'Seoul', country: 'South Korea', timezone: 'Asia/Seoul', flag: '🇰🇷', region: 'Asia' },
+  { id: 'riyadh', name: 'Riyadh', country: 'Saudi Arabia', timezone: 'Asia/Riyadh', flag: '🇸🇦', region: 'Asia' },
+  { id: 'tehran', name: 'Tehran', country: 'Iran', timezone: 'Asia/Tehran', flag: '🇮🇷', region: 'Asia' },
+  { id: 'tel-aviv', name: 'Tel Aviv', country: 'Israel', timezone: 'Asia/Jerusalem', flag: '🇮🇱', region: 'Asia' },
+  { id: 'beirut', name: 'Beirut', country: 'Lebanon', timezone: 'Asia/Beirut', flag: '🇱🇧', region: 'Asia' },
+  { id: 'tashkent', name: 'Tashkent', country: 'Uzbekistan', timezone: 'Asia/Tashkent', flag: '🇺🇿', region: 'Asia' },
+  { id: 'almaty', name: 'Almaty', country: 'Kazakhstan', timezone: 'Asia/Almaty', flag: '🇰🇿', region: 'Asia' },
+  { id: 'colombo', name: 'Colombo', country: 'Sri Lanka', timezone: 'Asia/Colombo', flag: '🇱🇰', region: 'Asia' },
+  { id: 'kathmandu', name: 'Kathmandu', country: 'Nepal', timezone: 'Asia/Kathmandu', flag: '🇳🇵', region: 'Asia' },
+  { id: 'yangon', name: 'Yangon', country: 'Myanmar', timezone: 'Asia/Rangoon', flag: '🇲🇲', region: 'Asia' },
+  { id: 'ulaanbaatar', name: 'Ulaanbaatar', country: 'Mongolia', timezone: 'Asia/Ulaanbaatar', flag: '🇲🇳', region: 'Asia' },
+
+  // Africa
+  { id: 'cairo', name: 'Cairo', country: 'Egypt', timezone: 'Africa/Cairo', flag: '🇪🇬', region: 'Africa' },
+  { id: 'lagos', name: 'Lagos', country: 'Nigeria', timezone: 'Africa/Lagos', flag: '🇳🇬', region: 'Africa' },
+  { id: 'nairobi', name: 'Nairobi', country: 'Kenya', timezone: 'Africa/Nairobi', flag: '🇰🇪', region: 'Africa' },
+  { id: 'johannesburg', name: 'Johannesburg', country: 'South Africa', timezone: 'Africa/Johannesburg', flag: '🇿🇦', region: 'Africa' },
+  { id: 'cape-town', name: 'Cape Town', country: 'South Africa', timezone: 'Africa/Johannesburg', flag: '🇿🇦', region: 'Africa' },
+  { id: 'casablanca', name: 'Casablanca', country: 'Morocco', timezone: 'Africa/Casablanca', flag: '🇲🇦', region: 'Africa' },
+  { id: 'addis-ababa', name: 'Addis Ababa', country: 'Ethiopia', timezone: 'Africa/Addis_Ababa', flag: '🇪🇹', region: 'Africa' },
+  { id: 'accra', name: 'Accra', country: 'Ghana', timezone: 'Africa/Accra', flag: '🇬🇭', region: 'Africa' },
+  { id: 'dar-es-salaam', name: 'Dar es Salaam', country: 'Tanzania', timezone: 'Africa/Dar_es_Salaam', flag: '🇹🇿', region: 'Africa' },
+  { id: 'khartoum', name: 'Khartoum', country: 'Sudan', timezone: 'Africa/Khartoum', flag: '🇸🇩', region: 'Africa' },
+  { id: 'algiers', name: 'Algiers', country: 'Algeria', timezone: 'Africa/Algiers', flag: '🇩🇿', region: 'Africa' },
+  { id: 'tunis', name: 'Tunis', country: 'Tunisia', timezone: 'Africa/Tunis', flag: '🇹🇳', region: 'Africa' },
+
+  // Oceania
+  { id: 'sydney', name: 'Sydney', country: 'Australia', timezone: 'Australia/Sydney', flag: '🇦🇺', region: 'Oceania' },
+  { id: 'melbourne', name: 'Melbourne', country: 'Australia', timezone: 'Australia/Melbourne', flag: '🇦🇺', region: 'Oceania' },
+  { id: 'brisbane', name: 'Brisbane', country: 'Australia', timezone: 'Australia/Brisbane', flag: '🇦🇺', region: 'Oceania' },
+  { id: 'perth', name: 'Perth', country: 'Australia', timezone: 'Australia/Perth', flag: '🇦🇺', region: 'Oceania' },
+  { id: 'adelaide', name: 'Adelaide', country: 'Australia', timezone: 'Australia/Adelaide', flag: '🇦🇺', region: 'Oceania' },
+  { id: 'auckland', name: 'Auckland', country: 'New Zealand', timezone: 'Pacific/Auckland', flag: '🇳🇿', region: 'Oceania' },
+  { id: 'honolulu', name: 'Honolulu', country: 'United States', timezone: 'Pacific/Honolulu', flag: '🇺🇸', region: 'Oceania' },
+  { id: 'suva', name: 'Suva', country: 'Fiji', timezone: 'Pacific/Fiji', flag: '🇫🇯', region: 'Oceania' },
+  { id: 'port-moresby', name: 'Port Moresby', country: 'Papua New Guinea', timezone: 'Pacific/Port_Moresby', flag: '🇵🇬', region: 'Oceania' },
+]
+
+export function getLocalCity(): City {
+  const localTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+  const found = CITIES.find(c => c.timezone === localTimezone)
+  if (found) return found
+
+  const parts = localTimezone.split('/')
+  const cityName = parts[parts.length - 1].replace(/_/g, ' ')
+  return {
+    id: 'local-' + localTimezone.replace(/\//g, '-').toLowerCase(),
+    name: cityName,
+    country: 'Local',
+    timezone: localTimezone,
+    flag: '🌍',
+    region: 'Local',
+  }
+}
+
+export const REGIONS = ['All', 'Americas', 'Europe', 'Asia', 'Africa', 'Oceania']
